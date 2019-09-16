@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     BluetoothHidDeviceAppQosSettings bluetoothHidDeviceAppQosSettings = new BluetoothHidDeviceAppQosSettings(1, 800, 9, 0, 11250, -1);
                     mBluetoothHidDeviceAppQosSettings = bluetoothHidDeviceAppQosSettings;
 
+
                     mBtHidDevice.registerApp(sdp, null, mBluetoothHidDeviceAppQosSettings, Executors.newSingleThreadExecutor(), new BluetoothHidDevice.Callback() {
                         @Override
                         public void onGetReport(BluetoothDevice device, byte type, byte id, int bufferSize) {
